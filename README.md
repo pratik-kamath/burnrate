@@ -70,7 +70,7 @@ Right-click the panel → **Quit** (it has no Dock icon by design — it's a men
 - **`BurnrateCore`** — UI-free, dependency-light logic: models, `ClaudeUsageProvider` (with `TokenStore` / `HTTPClient` seams), `OAuthUsageResponse` + `CodexUsageResponse` decoders, `BackoffPolicy`, `MilestoneNotifier`, `UsageStore`, color thresholds.
 - **`burnrate`** (executable) — AppKit/SwiftUI shell: `OverlayPanel` (borderless always-on-top `NSPanel`), `RingView`/`OverlayView`, `RefreshCoordinator` (timers), `CodexLiveProvider`, and the real Keychain / URLSession / UserNotifications adapters.
 
-Design details and decisions: `docs/superpowers/specs/2026-06-02-burnrate-design.md`.
+Design details and decisions: `docs/design.md`.
 
 ## Tests
 There is no automated test suite: the Command Line Tools toolchain ships no `XCTest`/`Testing` framework, so `swift test` can't run without full Xcode. Logic is verified by building (`swift build`) and by running the app against real data. The core logic is split behind protocols/value types, so a standard test target can be added once Xcode is installed.

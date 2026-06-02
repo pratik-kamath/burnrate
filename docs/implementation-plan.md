@@ -8,7 +8,7 @@
 
 **Tech Stack:** Swift 6.3 (language mode v5 for relaxed concurrency), Swift Package Manager, AppKit (`NSPanel`), SwiftUI, Combine (`ObservableObject`), `UserNotifications`, `Security` (Keychain). Swift `Testing` framework for tests.
 
-**Reference spec:** `docs/superpowers/specs/2026-06-02-burnrate-design.md`
+**Reference spec:** `docs/design.md`
 
 ### Data source schemas (ground truth)
 
@@ -80,7 +80,7 @@ burnrate/
 │   └── make-app.sh
 ├── Resources/
 │   └── Info.plist
-└── docs/superpowers/...
+└── docs/  (design.md, implementation-plan.md)
 ```
 
 ---
@@ -1793,7 +1793,7 @@ Requires Swift (Command Line Tools are enough — no Xcode needed).
     swift test
 
 ## Not tracked
-OpenAI Platform API spend, browser-only chat usage, dollar costs. See `docs/superpowers/specs/`.
+OpenAI Platform API spend, browser-only chat usage, dollar costs. See `docs/design.md`.
 ```
 
 - [ ] **Step 2: Commit**
