@@ -25,11 +25,11 @@ This is a personal, single-user tool for this machine. It is not intended for di
 | Provider | Source | What we get | Why this source |
 |---|---|---|---|
 | **Claude** | `GET https://api.anthropic.com/api/oauth/usage` with the OAuth token from the macOS Keychain (the entry Claude Code maintains) | 5h %, weekly %, reset timestamps | Claude Code transcripts log **tokens only, no rate-limit %**, so the endpoint is the *only* source of the authoritative plan %. Undocumented; shared across claude.ai + Desktop + Claude Code (one quota). |
-| **Codex** | Newest `~/.codex/sessions/**/rollout-*.jsonl`, last `rate_limits` event | `primary` (300-min / 5h window) + `secondary` (10080-min / weekly), each with `used_percent` and `resets_at` | The % is computed by OpenAI's backend and returned on each request; Codex **writes the official number to disk**. Reading the file gives the authoritative value with zero network/auth/risk. Only downside is staleness between Codex sessions, which we handle (see §5). |
+| **Codex** | Live `GET https://chatgpt.com/backend-api/codex/usage`, authed with the OAuth token from `~/.codex/auth.json` (+ `ChatGPT-Account-Id` header) | `rate_limit.primary_window` (5h) + `rate_limit.secondary_window` (weekly), each with `used_percent` and `reset_at` (epoch seconds) | **Revised during implementation (2026-06-02):** originally specced as reading the newest `~/.codex/sessions/**/rollout-*.jsonl`, but that only updates when the Codex CLI runs and lags the live dashboard (observed ~7h stale; web/cloud usage never lands locally). User chose **live-only, no fallback** for accuracy. The endpoint is read-only (does not consume quota). Access token expires ~hourly → refresh on 401 via `https://auth.openai.com/oauth/token` (client_id `app_EMoamEEZ73f0CkXaXp7hrann`, `grant_type=refresh_token`), kept in memory only (auth.json never rewritten). |
 
 **Known constraint — Claude endpoint rate-limits hard:** `/api/oauth/usage` is known to return persistent HTTP 429s if polled frequently. Polling must be conservative and backoff-aware (§4).
 
-**Asymmetry to remember:** Claude *must* hit the network (no local %); Codex *must not* (official % already on disk).
+**Both providers now hit the network** with undocumented OAuth endpoints (Claude reads its token from Keychain; Codex from `~/.codex/auth.json`). Either can break if the vendor changes things; both fail to `unavailable` ("—") rather than showing wrong/stale numbers.
 
 ---
 
@@ -41,7 +41,7 @@ Components are split so each has one purpose, a typed interface, and is independ
 
 - **`ClaudeUsageProvider`** — reads the OAuth token from Keychain, calls `oauth/usage`, maps the response to a `UsageSnapshot`. Owns its 429 backoff state. Does **not** refresh the token itself (Claude Code keeps it fresh; on 401 we surface `unavailable`).
 
-- **`CodexUsageProvider`** — finds the newest `rollout-*.jsonl` under `~/.codex/sessions/`, scans for the last `rate_limits` event, maps `primary`/`secondary` to a `UsageSnapshot`. Pure local file read. Applies reset-in-past logic (§5).
+- **`CodexLiveProvider`** (app target) — reads the OAuth token + account id from `~/.codex/auth.json`, calls `backend-api/codex/usage`, and maps `primary_window`/`secondary_window` to a `UsageSnapshot`. Refreshes the access token on 401 (in memory). The pure JSON→snapshot mapping lives in `CodexUsageResponse` in `BurnrateCore`. *(Originally `CodexUsageProvider`, a local rollout-file reader — replaced; see §2.)*
 
 - **`UsageStore`** — `ObservableObject` holding the latest `UsageSnapshot` for each provider plus last-updated/error state. Single source of truth for the UI.
 
@@ -65,9 +65,9 @@ Components are split so each has one purpose, a typed interface, and is independ
                     │ (@Published)  │        └─────────────┘
                     └───────▲───────┘
                             │ observed by
-  ~/.codex/sessions/*.jsonl │ ┌──────────────────────┐   ┌──────────────────┐
-  (newest rollout, last     └─│ CodexUsageProvider    │   │ MilestoneNotifier │──▶ macOS notifications
-   rate_limits event)         └──────────────────────┘   └──────────────────┘
+  ~/.codex/auth.json token  │ ┌──────────────────────┐   ┌──────────────────┐
+  ──▶ GET backend-api/      └─│ CodexLiveProvider     │   │ MilestoneNotifier │──▶ macOS notifications
+      codex/usage (live)      └──────────────────────┘   └──────────────────┘
 ```
 
 ---
@@ -75,8 +75,8 @@ Components are split so each has one purpose, a typed interface, and is independ
 ## 4. Refresh cadence
 
 - **Claude:** poll `oauth/usage` **every 5 minutes**, never faster. On HTTP 429, exponential backoff (5 → 10 → 20 min, capped) while continuing to display the last good value dimmed. Conservatism is the whole point given the endpoint's aggressive 429 behavior.
-- **Codex:** re-read the newest rollout file **every 30 seconds** (cheap), or watch `~/.codex/sessions` with a `DispatchSource` file-system watcher.
-- **Reset countdowns:** recomputed client-side every second from `resets_at`. No I/O or network just to tick a timer.
+- **Codex:** call the live usage endpoint **every 60 seconds**. It's read-only and doesn't consume quota, but 60s keeps the traffic polite. Token refresh happens lazily (only on a 401).
+- **Reset countdowns:** the ring shows the time-until-reset from `reset_at`. (v1 recomputes on each refresh tick rather than every second; per-second smoothing is a possible enhancement.)
 
 ---
 
@@ -85,9 +85,9 @@ Components are split so each has one purpose, a typed interface, and is independ
 - **No Keychain token / not signed into Claude Code** → Claude ring shows muted "—" with a "sign in to Claude Code" tooltip; Codex continues to work independently.
 - **Claude 429 / network failure** → keep last good value, dimmed, with a "stale" indicator.
 - **Claude 401 (token expired/revoked)** → `unavailable` state, prompt to re-auth in Claude Code.
-- **No Codex sessions yet** → Codex ring muted "—".
-- **Codex window already reset** (`resets_at` in the past) → show **0%** for that window (fresh cycle), not the stale value.
-- **Codex staleness** → when the snapshot's `asOf` is older than a few minutes, show a subtle "as of 14m ago" stamp so the number isn't mistaken for live.
+- **No `~/.codex/auth.json` / not signed into Codex** → Codex ring muted "—".
+- **Codex token expired** → refresh via the stored refresh token and retry once; if refresh fails → `unavailable` ("—").
+- **Codex endpoint error / offline** → `unavailable` ("—"). Per the live-only decision there is no local fallback, so the ring blanks rather than showing a stale number. (The live `used_percent` already reflects post-reset state, so no reset-in-past zeroing is needed.)
 - **Color thresholds** (ring color): green `<75%`, amber `75–90%`, red `>90%`, driven off the **higher** of the 5h/weekly percentages so the ring warns on whichever limit you'll hit first.
 
 ---
@@ -115,9 +115,9 @@ Components are split so each has one purpose, a typed interface, and is independ
 
 ## 8. Testing strategy
 
-Providers hold the logic; the UI is thin and reads from `UsageStore`.
+> **Implementation note (2026-06-02):** the build machine has Command Line Tools only — no Xcode — so neither `XCTest` nor `Testing` is available and `swift test` cannot run. Per decision, the automated test target was dropped. Logic was verified by `swift build` at each step, by running the live provider probes against real data (Codex weekly `used_percent` matched the dashboard), and by running the app. The logic remains split behind protocols/value types, so a standard test target can be added later once Xcode is installed. The plan below is retained as the intended coverage.
 
-- **`CodexUsageProvider`** — unit tests against scrubbed real `rollout-*.jsonl` fixtures: parse `rate_limits`, pick the newest file, `resets_at`-in-past → 0%, missing/empty sessions → `unavailable`.
+- **`CodexUsageResponse`** — mapping the live `rate_limit.primary_window`/`secondary_window` JSON → snapshot; missing fields → 0; `reset_at` → Date.
 - **`ClaudeUsageProvider`** — tests against captured `oauth/usage` JSON: happy path mapping, 429 → backoff state machine, 401 → `unavailable`, network error → `stale`.
 - **`MilestoneNotifier`** — crossing logic: fires once per threshold, never downward, re-arms on window reset.
 - **Color/threshold mapping** — pure function tests.
@@ -128,6 +128,8 @@ Providers hold the logic; the UI is thin and reads from `UsageStore`.
 
 ## 9. Open questions / future work
 
-- Optional **live Codex refresh** (replicate ChatGPT OAuth, hit `backend-api/codex`) if staleness becomes annoying — deferred; fragile and may consume the limit just to read it.
+- ~~Optional live Codex refresh~~ — **implemented 2026-06-02** (the live `backend-api/codex/usage` route is now the only Codex source). It turned out to be a read-only endpoint that does *not* consume quota, so the original "may consume the limit" worry didn't apply.
+- **Persist refreshed Codex token?** Currently refreshed in memory only. If hourly refreshes become noticeable, consider writing back to `auth.json` — but carefully, to avoid disrupting Codex's own auth (refresh-token rotation risk).
+- **Add a test target** once Xcode is installed (see §8).
 - Restyle / alternate layouts — architecture already isolates this to `RingView`.
-- Possible later additions: token-volume/cost detail in the expanded view, simple history sparkline.
+- Possible later additions: token-volume/cost detail in the expanded view, simple history sparkline, per-second reset countdown smoothing.
