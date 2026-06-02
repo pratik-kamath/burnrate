@@ -8,5 +8,12 @@
     "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models~partial.swiftmodule",
     "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swiftdeps",
     "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.dia"
+  },
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/UsageColor.swift": {
+    "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageColor.d",
+    "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageColor.swift.o",
+    "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageColor~partial.swiftmodule",
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageColor.swiftdeps",
+    "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageColor.dia"
   }
 }

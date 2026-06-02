@@ -28,6 +28,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/UsageColor.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
         },
         {
@@ -39,7 +43,8 @@
       "moduleName" : "BurnrateCore",
       "moduleOutputPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/BurnrateCore.swiftmodule",
       "objects" : [
-        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o"
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageColor.swift.o"
       ],
       "otherArguments" : [
         "-target",
@@ -92,12 +97,17 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageColor.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/BurnrateCore.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift"
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/UsageColor.swift"
       ],
       "tempsPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build",
       "wholeModuleOptimization" : false
@@ -204,6 +214,7 @@
       "burnrate",
       "-c",
       "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/UsageColor.swift",
       "-I",
       "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules",
       "-target",
@@ -335,6 +346,10 @@
         {
           "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/UsageColor.swift"
         }
       ],
       "outputFilePath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/sources"
@@ -377,6 +392,10 @@
         {
           "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageColor.swift.o"
         },
         {
           "kind" : "file",
