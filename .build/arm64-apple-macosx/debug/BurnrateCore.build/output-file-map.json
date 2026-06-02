@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/primary.swiftdeps"
+  },
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift": {
+    "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.d",
+    "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o",
+    "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swiftdeps",
+    "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.dia"
+  }
+}

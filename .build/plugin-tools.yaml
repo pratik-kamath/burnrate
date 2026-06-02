@@ -1,0 +1,103 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "BurnrateCore-arm64-apple-macosx-debug.module": ["<BurnrateCore-arm64-apple-macosx-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "burnrate-arm64-apple-macosx-debug.exe": ["<burnrate-arm64-apple-macosx-debug.exe>"]
+  "burnrate-arm64-apple-macosx-debug.module": ["<burnrate-arm64-apple-macosx-debug.module>"]
+  "main": ["<BurnrateCore-arm64-apple-macosx-debug.module>","<burnrate-arm64-apple-macosx-debug.exe>","<burnrate-arm64-apple-macosx-debug.module>"]
+  "test": ["<BurnrateCore-arm64-apple-macosx-debug.module>","<burnrate-arm64-apple-macosx-debug.exe>","<burnrate-arm64-apple-macosx-debug.module>"]
+default: "main"
+nodes:
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate":
+    is-mutated: true
+commands:
+  "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift"]
+    outputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/sources"]
+    description: "Write auxiliary file /Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/sources"
+
+  "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate-entitlement.plist"]
+    description: "Write auxiliary file /Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate-entitlement.plist"
+
+  "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/main.swift"]
+    outputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/sources"]
+    description: "Write auxiliary file /Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/sources"
+
+  "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/main.swift.o"]
+    outputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.product/Objects.LinkFileList"
+
+  "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<BurnrateCore-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/BurnrateCore.swiftmodule"]
+    outputs: ["<BurnrateCore-arm64-apple-macosx-debug.module>"]
+
+  "<burnrate-arm64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<burnrate-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<burnrate-arm64-apple-macosx-debug.exe>"]
+
+  "<burnrate-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/main.swift.o","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/burnrate.swiftmodule"]
+    outputs: ["<burnrate-arm64-apple-macosx-debug.module>"]
+
+  "C.BurnrateCore-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/sources"]
+    outputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/BurnrateCore.swiftmodule"]
+    description: "Compiling Swift Module 'BurnrateCore' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","BurnrateCore","-emit-dependencies","-emit-module","-emit-module-path","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/BurnrateCore.swiftmodule","-output-file-map","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/sources","-I","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/include/BurnrateCore-Swift.h","-swift-version","5","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","burnrate"]
+
+  "C.burnrate-arm64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/main.swift.o","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.product/Objects.LinkFileList"]
+    outputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/burnrate"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug","-o","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate","-module-name","burnrate","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_burnrate_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/BurnrateCore.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/burnrate.swiftmodule","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g"]
+
+  "C.burnrate-arm64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate-entitlement.plist"]
+    outputs: ["<burnrate-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/burnrate"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate-entitlement.plist","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate"]
+
+  "C.burnrate-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/main.swift","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/BurnrateCore.swiftmodule","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/sources"]
+    outputs: ["/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/main.swift.o","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/burnrate.swiftmodule"]
+    description: "Compiling Swift Module 'burnrate' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","burnrate","-emit-dependencies","-emit-module","-emit-module-path","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/burnrate.swiftmodule","-output-file-map","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/output-file-map.json","-incremental","-c","@/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/sources","-I","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","burnrate_main","-swift-version","5","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","burnrate"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/","/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/","/Users/pratikkamath/Github-Projects/burnrate/Package.swift","/Users/pratikkamath/Github-Projects/burnrate/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

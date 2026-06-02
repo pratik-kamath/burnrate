@@ -1,0 +1,17 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate'
+relocations:
+  - { offset: 0x89, size: 0x8, addend: 0x0, symName: '_$s12BurnrateCore08burnrateB7Version_WZ', symObjAddr: 0x0, symBinAddr: 0x100000708, symSize: 0x40 }
+  - { offset: 0xAB, size: 0x8, addend: 0x0, symName: '_$s12BurnrateCore08burnrateB7VersionSSvp', symObjAddr: 0x9F8, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0xB8, size: 0x8, addend: 0x0, symName: '_$s12BurnrateCore08burnrateB7Version_WZ', symObjAddr: 0x0, symBinAddr: 0x100000708, symSize: 0x40 }
+  - { offset: 0xD1, size: 0x8, addend: 0x0, symName: '_$s12BurnrateCore08burnrateB7VersionSSvau', symObjAddr: 0x40, symBinAddr: 0x100000748, symSize: 0x50 }
+  - { offset: 0x183, size: 0x8, addend: 0x0, symName: _burnrate_main, symObjAddr: 0x0, symBinAddr: 0x100000798, symSize: 0x1B8 }
+  - { offset: 0x199, size: 0x8, addend: 0x0, symName: _burnrate_main, symObjAddr: 0x0, symBinAddr: 0x100000798, symSize: 0x1B8 }
+  - { offset: 0x1B6, size: 0x8, addend: 0x0, symName: '_$sSSWOh', symObjAddr: 0x1B8, symBinAddr: 0x100000950, symSize: 0x28 }
+  - { offset: 0x1C9, size: 0x8, addend: 0x0, symName: '_$ss26DefaultStringInterpolationVWOh', symObjAddr: 0x1E0, symBinAddr: 0x100000978, symSize: 0x28 }
+  - { offset: 0x1DC, size: 0x8, addend: 0x0, symName: '_$sSa12_endMutationyyF', symObjAddr: 0x2A0, symBinAddr: 0x100000A38, symSize: 0xC }
+  - { offset: 0x1FD, size: 0x8, addend: 0x0, symName: '_$ss27_finalizeUninitializedArrayySayxGABnlF', symObjAddr: 0x208, symBinAddr: 0x1000009A0, symSize: 0x40 }
+  - { offset: 0x225, size: 0x8, addend: 0x0, symName: '_$ss5print_9separator10terminatoryypd_S2StFfA0_', symObjAddr: 0x248, symBinAddr: 0x1000009E0, symSize: 0x2C }
+  - { offset: 0x240, size: 0x8, addend: 0x0, symName: '_$ss5print_9separator10terminatoryypd_S2StFfA1_', symObjAddr: 0x274, symBinAddr: 0x100000A0C, symSize: 0x2C }
+...

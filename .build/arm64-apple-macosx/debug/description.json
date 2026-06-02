@@ -1,0 +1,403 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.BurnrateCore-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/sources",
+      "importPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "BurnrateCore",
+      "moduleOutputPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/BurnrateCore.swiftmodule",
+      "objects" : [
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/include/BurnrateCore-Swift.h",
+        "-swift-version",
+        "5",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "burnrate"
+      ],
+      "outputFileMapPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/BurnrateCore.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift"
+      ],
+      "tempsPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.burnrate-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/sources",
+      "importPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/BurnrateCore.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "burnrate",
+      "moduleOutputPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/burnrate.swiftmodule",
+      "objects" : [
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "burnrate_main",
+        "-swift-version",
+        "5",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "burnrate"
+      ],
+      "outputFileMapPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/burnrate.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/main.swift"
+      ],
+      "tempsPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "BurnrateCore" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "BurnrateCore",
+      "-package-name",
+      "burnrate",
+      "-c",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift",
+      "-I",
+      "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/include/BurnrateCore-Swift.h",
+      "-swift-version",
+      "5",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "burnrate",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "burnrate" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "burnrate",
+      "-package-name",
+      "burnrate",
+      "-c",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/main.swift",
+      "-I",
+      "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "burnrate_main",
+      "-swift-version",
+      "5",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "burnrate",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "BurnrateCore" : [
+
+    ],
+    "burnrate" : [
+      "BurnrateCore"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/sources"
+    },
+    "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate-entitlement.plist"
+    },
+    "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/sources"
+    },
+    "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.product/Objects.LinkFileList"
+    },
+    "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}
