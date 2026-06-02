@@ -18,7 +18,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         coordinator = RefreshCoordinator(
             store: store,
             claude: ClaudeUsageProvider(tokenStore: KeychainTokenStore(), http: URLSessionHTTPClient()),
-            codex: CodexUsageProvider(),
+            codex: CodexLiveProvider(),
             notifier: notifier
         )
 

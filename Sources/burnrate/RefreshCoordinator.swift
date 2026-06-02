@@ -5,14 +5,14 @@ import BurnrateCore
 final class RefreshCoordinator {
     private let store: UsageStore
     private let claude: ClaudeUsageProvider
-    private let codex: CodexUsageProvider
+    private let codex: CodexLiveProvider
     private let notifier: MilestoneNotifier
 
     private var claudeBackoff = BackoffPolicy()
     private var codexTimer: Timer?
     private var claudeTask: Task<Void, Never>?
 
-    init(store: UsageStore, claude: ClaudeUsageProvider, codex: CodexUsageProvider, notifier: MilestoneNotifier) {
+    init(store: UsageStore, claude: ClaudeUsageProvider, codex: CodexLiveProvider, notifier: MilestoneNotifier) {
         self.store = store
         self.claude = claude
         self.codex = codex
@@ -20,23 +20,23 @@ final class RefreshCoordinator {
     }
 
     func start() {
-        // Codex: cheap local read every 30s.
-        refreshCodex()
-        codexTimer = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { [weak self] _ in
-            Task { @MainActor in self?.refreshCodex() }
+        // Codex: live usage fetch every 60s (read-only endpoint, does not consume quota).
+        Task { @MainActor in await refreshCodex() }
+        codexTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
+            Task { @MainActor in await self?.refreshCodex() }
         }
         // Claude: self-rescheduling loop honoring backoff.
         scheduleClaude(after: 0)
     }
 
     func refreshNow() {
-        refreshCodex()
+        Task { @MainActor in await refreshCodex() }
         claudeTask?.cancel()
         scheduleClaude(after: 0)
     }
 
-    private func refreshCodex() {
-        let snap = codex.snapshot(now: Date())
+    private func refreshCodex() async {
+        let snap = await codex.snapshot(now: Date())
         store.update(snap)
         notifier.evaluate(snap)
     }

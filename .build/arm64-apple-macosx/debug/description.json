@@ -24,7 +24,43 @@
       "inputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/BackoffPolicy.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/ClaudeUsageProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/HTTPClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/OAuthUsageResponse.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/TokenStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Codex/CodexUsageResponse.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Notifications/MilestoneNotifier.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Notifications/NotificationDispatcher.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Store/UsageStore.swift"
         },
         {
           "kind" : "file",
@@ -43,7 +79,16 @@
       "moduleName" : "BurnrateCore",
       "moduleOutputPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/BurnrateCore.swiftmodule",
       "objects" : [
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/BackoffPolicy.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/ClaudeUsageProvider.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/HTTPClient.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/OAuthUsageResponse.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/TokenStore.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/CodexUsageResponse.swift.o",
         "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/MilestoneNotifier.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/NotificationDispatcher.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageStore.swift.o",
         "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageColor.swift.o"
       ],
       "otherArguments" : [
@@ -93,7 +138,43 @@
       "outputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/BackoffPolicy.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/ClaudeUsageProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/HTTPClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/OAuthUsageResponse.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/TokenStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/CodexUsageResponse.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/MilestoneNotifier.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/NotificationDispatcher.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageStore.swift.o"
         },
         {
           "kind" : "file",
@@ -106,7 +187,16 @@
       ],
       "prepareForIndexing" : false,
       "sources" : [
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/BackoffPolicy.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/ClaudeUsageProvider.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/HTTPClient.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/OAuthUsageResponse.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/TokenStore.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Codex/CodexUsageResponse.swift",
         "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Notifications/MilestoneNotifier.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Notifications/NotificationDispatcher.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Store/UsageStore.swift",
         "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/UsageColor.swift"
       ],
       "tempsPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build",
@@ -117,6 +207,42 @@
       "fileList" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/sources",
       "importPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules",
       "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/AppDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/CodexLiveProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/KeychainTokenStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/OverlayPanel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/RefreshCoordinator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/UNNotificationDispatcher.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/URLSessionHTTPClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/Views/OverlayView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/Views/RingView.swift"
+        },
         {
           "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/main.swift"
@@ -138,6 +264,15 @@
       "moduleName" : "burnrate",
       "moduleOutputPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules/burnrate.swiftmodule",
       "objects" : [
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/AppDelegate.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/CodexLiveProvider.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/KeychainTokenStore.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/OverlayPanel.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/RefreshCoordinator.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/UNNotificationDispatcher.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/URLSessionHTTPClient.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/OverlayView.swift.o",
+        "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/RingView.swift.o",
         "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/main.swift.o"
       ],
       "otherArguments" : [
@@ -187,6 +322,42 @@
       "outputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/AppDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/CodexLiveProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/KeychainTokenStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/OverlayPanel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/RefreshCoordinator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/UNNotificationDispatcher.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/URLSessionHTTPClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/OverlayView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/RingView.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/main.swift.o"
         },
         {
@@ -196,6 +367,15 @@
       ],
       "prepareForIndexing" : false,
       "sources" : [
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/AppDelegate.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/CodexLiveProvider.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/KeychainTokenStore.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/OverlayPanel.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/RefreshCoordinator.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/UNNotificationDispatcher.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/URLSessionHTTPClient.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/Views/OverlayView.swift",
+        "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/Views/RingView.swift",
         "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/main.swift"
       ],
       "tempsPath" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build",
@@ -213,7 +393,16 @@
       "-package-name",
       "burnrate",
       "-c",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/BackoffPolicy.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/ClaudeUsageProvider.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/HTTPClient.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/OAuthUsageResponse.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/TokenStore.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Codex/CodexUsageResponse.swift",
       "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Notifications/MilestoneNotifier.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Notifications/NotificationDispatcher.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Store/UsageStore.swift",
       "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/UsageColor.swift",
       "-I",
       "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules",
@@ -268,6 +457,15 @@
       "-package-name",
       "burnrate",
       "-c",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/AppDelegate.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/CodexLiveProvider.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/KeychainTokenStore.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/OverlayPanel.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/RefreshCoordinator.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/UNNotificationDispatcher.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/URLSessionHTTPClient.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/Views/OverlayView.swift",
+      "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/Views/RingView.swift",
       "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/main.swift",
       "-I",
       "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/Modules",
@@ -345,7 +543,43 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/BackoffPolicy.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/ClaudeUsageProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/HTTPClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/OAuthUsageResponse.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/TokenStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Codex/CodexUsageResponse.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Notifications/MilestoneNotifier.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Notifications/NotificationDispatcher.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Store/UsageStore.swift"
         },
         {
           "kind" : "file",
@@ -377,6 +611,42 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/AppDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/CodexLiveProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/KeychainTokenStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/OverlayPanel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/RefreshCoordinator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/UNNotificationDispatcher.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/URLSessionHTTPClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/Views/OverlayView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/Views/RingView.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/Sources/burnrate/main.swift"
         }
       ],
@@ -391,11 +661,83 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/BackoffPolicy.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/ClaudeUsageProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/CodexUsageResponse.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/HTTPClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/MilestoneNotifier.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o"
         },
         {
           "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/NotificationDispatcher.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/OAuthUsageResponse.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/TokenStore.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageColor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/AppDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/CodexLiveProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/KeychainTokenStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/OverlayPanel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/OverlayView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/RefreshCoordinator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/RingView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/UNNotificationDispatcher.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/burnrate.build/URLSessionHTTPClient.swift.o"
         },
         {
           "kind" : "file",

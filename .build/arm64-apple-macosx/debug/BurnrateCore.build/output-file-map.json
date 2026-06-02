@@ -2,12 +2,75 @@
   "": {
     "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/primary.swiftdeps"
   },
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/BackoffPolicy.swift": {
+    "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/BackoffPolicy.d",
+    "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/BackoffPolicy.swift.o",
+    "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/BackoffPolicy~partial.swiftmodule",
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/BackoffPolicy.swiftdeps",
+    "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/BackoffPolicy.dia"
+  },
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/ClaudeUsageProvider.swift": {
+    "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/ClaudeUsageProvider.d",
+    "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/ClaudeUsageProvider.swift.o",
+    "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/ClaudeUsageProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/ClaudeUsageProvider.swiftdeps",
+    "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/ClaudeUsageProvider.dia"
+  },
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/HTTPClient.swift": {
+    "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/HTTPClient.d",
+    "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/HTTPClient.swift.o",
+    "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/HTTPClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/HTTPClient.swiftdeps",
+    "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/HTTPClient.dia"
+  },
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/OAuthUsageResponse.swift": {
+    "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/OAuthUsageResponse.d",
+    "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/OAuthUsageResponse.swift.o",
+    "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/OAuthUsageResponse~partial.swiftmodule",
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/OAuthUsageResponse.swiftdeps",
+    "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/OAuthUsageResponse.dia"
+  },
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Claude/TokenStore.swift": {
+    "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/TokenStore.d",
+    "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/TokenStore.swift.o",
+    "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/TokenStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/TokenStore.swiftdeps",
+    "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/TokenStore.dia"
+  },
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Codex/CodexUsageResponse.swift": {
+    "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/CodexUsageResponse.d",
+    "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/CodexUsageResponse.swift.o",
+    "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/CodexUsageResponse~partial.swiftmodule",
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/CodexUsageResponse.swiftdeps",
+    "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/CodexUsageResponse.dia"
+  },
   "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Models.swift": {
     "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.d",
     "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swift.o",
     "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models~partial.swiftmodule",
     "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.swiftdeps",
     "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/Models.dia"
+  },
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Notifications/MilestoneNotifier.swift": {
+    "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/MilestoneNotifier.d",
+    "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/MilestoneNotifier.swift.o",
+    "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/MilestoneNotifier~partial.swiftmodule",
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/MilestoneNotifier.swiftdeps",
+    "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/MilestoneNotifier.dia"
+  },
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Notifications/NotificationDispatcher.swift": {
+    "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/NotificationDispatcher.d",
+    "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/NotificationDispatcher.swift.o",
+    "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/NotificationDispatcher~partial.swiftmodule",
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/NotificationDispatcher.swiftdeps",
+    "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/NotificationDispatcher.dia"
+  },
+  "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/Store/UsageStore.swift": {
+    "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageStore.d",
+    "object": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageStore.swift.o",
+    "swiftmodule": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageStore.swiftdeps",
+    "diagnostics": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageStore.dia"
   },
   "/Users/pratikkamath/Github-Projects/burnrate/Sources/BurnrateCore/UsageColor.swift": {
     "dependencies": "/Users/pratikkamath/Github-Projects/burnrate/.build/arm64-apple-macosx/debug/BurnrateCore.build/UsageColor.d",
