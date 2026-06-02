@@ -1,6 +1,6 @@
 # burnrate Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> This plan is written as bite-sized, test-first tasks. Steps use checkbox (`- [ ]`) syntax for tracking. Implement task-by-task, building/verifying after each.
 
 **Goal:** A native macOS floating always-on-top overlay showing two ring gauges (Claude + Codex) for plan rate-limit usage, with macOS milestone notifications at 50/75/90%.
 
