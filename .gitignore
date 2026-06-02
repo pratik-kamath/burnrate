@@ -9,6 +9,10 @@ burnrate.app/
 # macOS
 .DS_Store
 
+# Local Claude Code notes (personal, not for the public repo)
+CLAUDE.md
+.claude.local.md
+
 # Defensive: never commit credentials, even if copied in for testing
 .env
 *.env
