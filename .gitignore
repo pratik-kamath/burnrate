@@ -1,4 +1,18 @@
-.superpowers/
+# Build artifacts
 .build/
 burnrate.app/
 *.xcodeproj
+
+# Brainstorm scratch (mockups, server state)
+.superpowers/
+
+# macOS
+.DS_Store
+
+# Defensive: never commit credentials, even if copied in for testing
+.env
+*.env
+auth.json
+*.credentials.json
+.credentials.json
+secrets/
