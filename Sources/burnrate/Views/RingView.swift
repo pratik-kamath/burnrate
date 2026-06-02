@@ -1,62 +1,88 @@
 import SwiftUI
 import BurnrateCore
 
+/// One provider's gauge: two concentric rings (inner = 5-hour, outer = weekly),
+/// the 5-hour % in the center, and provider name + weekly%/reset beneath.
 struct RingView: View {
     let title: String
     let tint: Color
     let snapshot: UsageSnapshot
-    @State private var hovering = false
+
+    private var available: Bool { snapshot.status != .unavailable }
 
     private var level: UsageLevel {
         UsageLevel(fiveHourPercent: snapshot.fiveHour.usedPercent,
                    weeklyPercent: snapshot.weekly.usedPercent)
     }
-    private var ringColor: Color {
+    private var accent: Color {
         switch level {
         case .normal: return tint
         case .amber:  return .orange
         case .red:    return .red
         }
     }
-    private var fraction: Double { min(1, snapshot.fiveHour.usedPercent / 100) }
+    private var fiveHourFraction: Double { available ? min(1, snapshot.fiveHour.usedPercent / 100) : 0 }
+    private var weeklyFraction: Double { available ? min(1, snapshot.weekly.usedPercent / 100) : 0 }
 
     var body: some View {
-        VStack(spacing: 6) {
+        VStack(spacing: 9) {
             ZStack {
-                Circle().stroke(.white.opacity(0.12), lineWidth: 6)
+                // Outer ring = weekly
+                Circle().stroke(.white.opacity(0.10), lineWidth: 5)
                 Circle()
-                    .trim(from: 0, to: snapshot.status == .unavailable ? 0 : fraction)
-                    .stroke(ringColor, style: StrokeStyle(lineWidth: 6, lineCap: .round))
+                    .trim(from: 0, to: weeklyFraction)
+                    .stroke(accent.opacity(0.45), style: StrokeStyle(lineWidth: 5, lineCap: .round))
                     .rotationEffect(.degrees(-90))
+                    .animation(.smooth(duration: 0.5), value: weeklyFraction)
+
+                // Inner ring = 5-hour (inset)
+                Circle().stroke(.white.opacity(0.10), lineWidth: 5).padding(11)
+                Circle()
+                    .trim(from: 0, to: fiveHourFraction)
+                    .stroke(accent, style: StrokeStyle(lineWidth: 5, lineCap: .round))
+                    .rotationEffect(.degrees(-90))
+                    .padding(11)
+                    .animation(.smooth(duration: 0.5), value: fiveHourFraction)
+
                 Text(centerText)
-                    .font(.system(size: 15, weight: .bold)).monospacedDigit()
+                    .font(.system(size: 17, weight: .bold, design: .rounded))
+                    .monospacedDigit()
+                    .foregroundStyle(.primary)
             }
-            .frame(width: 62, height: 62)
-            Text(title).font(.system(size: 12, weight: .semibold)).foregroundStyle(tint)
-            if hovering { detail }
+            .frame(width: 78, height: 78)
+
+            VStack(spacing: 1) {
+                Text(title.uppercased())
+                    .font(.system(size: 10, weight: .semibold))
+                    .tracking(0.6)
+                    .foregroundStyle(tint)
+                Text(subText)
+                    .font(.system(size: 9, weight: .medium))
+                    .monospacedDigit()
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: true, vertical: false) // don't clamp to the ring width
+            }
         }
-        .opacity(snapshot.status == .stale ? 0.55 : 1)
-        .onHover { hovering = $0 }
-        .help(snapshot.status == .unavailable ? unavailableHelp : "")
+        .opacity(snapshot.status == .stale ? 0.5 : 1)
+        .help(available ? "" : unavailableHelp)
     }
 
     private var centerText: String {
-        snapshot.status == .unavailable ? "—" : "\(Int(snapshot.fiveHour.usedPercent.rounded()))%"
+        available ? "\(Int(snapshot.fiveHour.usedPercent.rounded()))%" : "—"
+    }
+    private var subText: String {
+        guard available else { return "no data" }
+        let wk = Int(snapshot.weekly.usedPercent.rounded())
+        if let r = snapshot.fiveHour.resetsAt {
+            return "wk \(wk)% · \(reset(r))"
+        }
+        return "wk \(wk)%"
     }
     private var unavailableHelp: String {
-        snapshot.provider == .claude ? "Sign in to Claude Code" : "Run Codex to populate usage"
-    }
-    private var detail: some View {
-        VStack(spacing: 2) {
-            Text("Weekly \(Int(snapshot.weekly.usedPercent.rounded()))%")
-            if let r = snapshot.fiveHour.resetsAt {
-                Text("5h resets \(reset(r))")
-            }
-        }
-        .font(.system(size: 10)).foregroundStyle(.secondary)
+        snapshot.provider == .claude ? "Sign in to Claude Code" : "Sign in to Codex"
     }
     private func reset(_ d: Date) -> String {
         let m = max(0, Int(d.timeIntervalSinceNow / 60))
-        return m >= 60 ? "\(m/60)h \(m%60)m" : "\(m)m"
+        return m >= 60 ? "\(m / 60)h \(m % 60)m" : "\(m)m"
     }
 }

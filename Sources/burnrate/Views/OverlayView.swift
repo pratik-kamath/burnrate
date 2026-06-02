@@ -6,10 +6,17 @@ struct OverlayView: View {
 
     var body: some View {
         HStack(spacing: 18) {
-            RingView(title: "Claude", tint: Color(red: 0.91, green: 0.66, blue: 0.49), snapshot: store.claude)
-            RingView(title: "Codex", tint: Color(red: 0.24, green: 0.85, blue: 0.66), snapshot: store.codex)
+            RingView(title: "Claude",
+                     tint: Color(red: 0.86, green: 0.53, blue: 0.39),
+                     snapshot: store.claude)
+            RingView(title: "Codex",
+                     tint: Color(red: 0.20, green: 0.80, blue: 0.60),
+                     snapshot: store.codex)
         }
-        .padding(14)
-        .background(.black.opacity(0.85), in: RoundedRectangle(cornerRadius: 14))
+        .padding(.horizontal, 20)
+        .padding(.vertical, 16)
+        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+        .shadow(color: .black.opacity(0.35), radius: 10, y: 4)
+        .padding(12) // transparent room for the shadow inside the window bounds
     }
 }

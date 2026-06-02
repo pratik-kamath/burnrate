@@ -8,15 +8,20 @@ final class OverlayPanel: NSPanel {
             styleMask: [.borderless, .nonactivatingPanel],
             backing: .buffered, defer: false
         )
-        isFloatingPanel = true
-        level = .floating
-        collectionBehavior = [.canJoinAllSpaces, .stationary]
+        isFloatingPanel = false
+        // Sit on the desktop: just above the desktop icons, but below all normal
+        // app windows — so it lives on the wallpaper and never covers your work.
+        level = NSWindow.Level(rawValue: Int(CGWindowLevelForKey(.desktopIconWindow)) + 1)
+        collectionBehavior = [.canJoinAllSpaces, .stationary, .ignoresCycle]
         backgroundColor = .clear
         isOpaque = false
-        hasShadow = true
+        hasShadow = false   // use the SwiftUI shadow instead; the window shadow double-frames a transparent panel
         isMovableByWindowBackground = true
         let host = NSHostingView(rootView: content)
-        host.frame = contentView!.bounds
+        host.layoutSubtreeIfNeeded()
+        let fit = host.fittingSize
+        setContentSize(fit)
+        host.frame = NSRect(origin: .zero, size: fit)
         host.autoresizingMask = [.width, .height]
         contentView?.addSubview(host)
         restorePosition()
